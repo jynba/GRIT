@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress';
 
-const base = "/"
+const base = '/';
 export default defineConfig({
 	title: 'GRIT',
 	description: '描述信息',
