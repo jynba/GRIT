@@ -1,19 +1,16 @@
 import { defineConfig } from 'vitepress';
 
-const base = '/';
 export default defineConfig({
 	title: 'GRIT',
 	description: '描述信息',
+	outDir: '.vitepress/GRIT', //将打包文件名改为GRIT
 	base: '/GRIT/', // 部署到github上时访问的根目录
 	lastUpdated: true, // 页面上展示最后更新的时间
 	head: [
-		// 打包后使用
-		['link', { rel: 'icon', href: `${base}favicon.ico` }],
-		//本地开发使用
-		['link', { rel: 'icon', href: '/favicon.ico' }], // 也是放在/public目录中
+		['link', { rel: 'icon', href: '/logo.ico' }], // 也是放在/public目录中
 	],
 	themeConfig: {
-		logo: '/logo.png', // 也是放在/public目录中
+		logo: '/logo.svg', // 也是放在/public目录中
 		nav: [
 			// 页面最上面一行的导航栏
 			{ text: '首页', link: '/' }, // 导航栏名字和目录地址，如果文件名叫index.md可以省略不写，路径只写到目录
