@@ -6,17 +6,20 @@ title: 前端小窝
 hero:
   name: GRIT
   text: 风起于青萍之末
-  tagline: A ship in harbor is safe, but that is not what ships are built for.
+  tagline: fig. big accomplishments come from an accumulation of little achievements made one by one
   image:
     src: portrait.svg
     alt: logo
   actions:
     - theme: brand
-      text: 更多详情
-      link: https://github.com/jynba
+      text: 旧版博客(vuepress)
+      link: https://jynba.github.io/
     - theme: alt
       text: 前端导航
-      link: https://jynba.github.io/GRIT/resources/navigation/nav
+      link: /resources/navigation/nav
+    - theme: alt
+      text: 时间轴
+      link: /timeline/weekly2023
 features:
   - icon: ⚡️
     title: 积累实用工具

@@ -6,6 +6,7 @@ const timeline: DefaultTheme.SidebarItem[] = [
 		items: [
 			{ text: '2023时间轴', link: '/timeline/weekly2023' },
 			{ text: '我的博文', link: '/timeline/blog_essay' },
+			{ text: '策略模式', link: '/timeline/strategy' },
 		],
 	},
 ];

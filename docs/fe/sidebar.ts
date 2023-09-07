@@ -56,12 +56,12 @@ const fe: DefaultTheme.SidebarItem[] = [
 		collapsed: true,
 		items: [
 			{
-				text: 'Nginx相关',
-				link: '/fe/net/nginx',
-			},
-			{
 				text: 'HTTP协议的发展',
 				link: '/fe/net/HTTP_version',
+			},
+			{
+				text: 'Nginx相关',
+				link: '/fe/net/nginx',
 			},
 			{
 				text: 'HTTPS原理',

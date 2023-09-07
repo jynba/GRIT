@@ -29,7 +29,7 @@ export default defineConfig({
 		socialLinks: [{ icon: 'github', link: 'https://github.com/jynba/GRIT' }],
 
 		// 配置从导航栏进去后的侧边栏
-		sidebar: sidebar,
+		sidebar,
 		/* 右侧大纲配置 */
 		outline: {
 			level: 'deep',

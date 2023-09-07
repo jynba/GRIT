@@ -40,17 +40,25 @@ export const nav: DefaultTheme.Config['nav'] = [
 		link: '/cs/network',
 	},
 	{
-		text: '其它语言',
-		items: [{ text: 'Python', link: '/lang/python/crawler' }],
+		text: '后端语言',
+		items: [{ text: 'Java', link: '/other/java/static' }],
 	},
 	{
-		text: '高效搬砖',
+		text: '可视化开发',
 		items: [
-			{ text: 'Antd 虐我千百遍', link: '/work/antd' },
-			{ text: '第三方工具', link: '/work/tools' },
 			{
 				text: '地图开发',
-				items: [{ text: '微信小程序地图开发', link: '/work/maps/wx_map' }],
+				items: [
+					{
+						text: '微信小程序Map',
+						link: 'https://developers.weixin.qq.com/miniprogram/dev/component/map.html',
+					},
+					{ text: 'Cesium 3D地球', link: 'https://cesium.com/' },
+					{
+						text: 'Echarts地图',
+						link: 'https://echarts.apache.org/zh/index.html',
+					},
+				],
 			},
 		],
 	},
