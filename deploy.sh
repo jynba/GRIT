@@ -9,8 +9,8 @@ set -e
 echo 'blog.stm32-mqtt.top' > CNAME
 
 git init
-git add -A
-git commit -m 'deploy'
+git add .
+git commit -m 'feat:deploy最新版blog（vitepress）'
 
 # 如果你想要部署到 https://<USERNAME>.github.io
 # git push -f git@github.com:jynba/jynba.github.io.git master

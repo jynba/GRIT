@@ -1,37 +1,66 @@
-import { defineConfig } from 'vitepress';
+import { createWriteStream } from 'node:fs';
+import { resolve } from 'node:path';
+import { SitemapStream } from 'sitemap';
+import { head, nav, sidebar, algolia } from './configs';
+import { defineConfig, PageData } from 'vitepress';
+const links: { url: string; lastmod: PageData['lastUpdated'] }[] = [];
 
 export default defineConfig({
 	title: 'GRIT',
-	description: '描述信息',
+	description: 'JY的前端小窝',
 	outDir: '.vitepress/GRIT', //将打包文件名改为GRIT
 	base: '/GRIT/', // 部署到github上时访问的根目录
 	lastUpdated: true, // 页面上展示最后更新的时间
-	head: [
-		['link', { rel: 'icon', href: '/logo.ico' }], // 也是放在/public目录中
-	],
+	head,
+
+	// 不显示html后缀
+	cleanUrls: true,
+
+	/* markdown 配置 */
+	markdown: {
+		lineNumbers: true,
+	},
+
 	themeConfig: {
-		logo: '/logo.svg', // 也是放在/public目录中
-		nav: [
-			// 页面最上面一行的导航栏
-			{ text: '首页', link: '/' }, // 导航栏名字和目录地址，如果文件名叫index.md可以省略不写，路径只写到目录
-		],
+		i18nRouting: false,
+		logo: '/logo.ico', // 也是放在/public目录中
+		nav,
 		// 配置github地址
 		socialLinks: [{ icon: 'github', link: 'https://github.com/jynba/GRIT' }],
-		footer: {
-			message: 'Released under the MIT License.',
-			copyright: 'Copyright © 2023-5-21',
-		},
+
 		// 配置从导航栏进去后的侧边栏
-		sidebar: {
-			'/GRIT/': [
-				{
-					text: '通用函数',
-					items: [
-						{ text: '过滤对象', link: '/GRIT/functions/' },
-						{ text: '统计执行时间', link: '/GRIT/functions/task/' },
-					],
-				},
-			],
+		sidebar: sidebar,
+		/* 右侧大纲配置 */
+		outline: {
+			level: 'deep',
+			label: '本页目录',
 		},
+		footer: {
+			message: '如有转载或 CV 的请标注本站原文地址',
+			copyright: 'Copyright © 2023-present jynba',
+		},
+		docFooter: {
+			prev: '上一篇',
+			next: '下一篇',
+		},
+		darkModeSwitchLabel: '外观',
+		returnToTopLabel: '返回顶部',
+		lastUpdatedText: '上次更新',
+	},
+	/* 生成站点地图 */
+	transformHtml: (_, id, { pageData }) => {
+		if (!/[\\/]404\.html$/.test(id))
+			links.push({
+				url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'),
+				lastmod: pageData.lastUpdated,
+			});
+	},
+	buildEnd: async ({ outDir }) => {
+		const sitemap = new SitemapStream({ hostname: 'https://notes.fe-mm.com/' });
+		const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'));
+		sitemap.pipe(writeStream);
+		links.forEach((link) => sitemap.write(link));
+		sitemap.end();
+		await new Promise((r) => writeStream.on('finish', r));
 	},
 });

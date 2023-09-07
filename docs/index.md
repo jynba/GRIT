@@ -1,7 +1,7 @@
 ---
 layout: home
 
-title: Home
+title: 前端小窝
 
 hero:
   name: GRIT
@@ -13,10 +13,10 @@ hero:
   actions:
     - theme: brand
       text: 更多详情
-      link: https://github.com/jynba/GRIT
+      link: https://github.com/jynba
     - theme: alt
-      text: 访问我的GitHub
-      link: https://github.com/jynba/GRIT
+      text: 前端导航
+      link: https://jynba.github.io/GRIT/resources/navigation/nav
 features:
   - icon: ⚡️
     title: 积累实用工具

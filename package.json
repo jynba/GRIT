@@ -4,14 +4,20 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"docs:dev": "vitepress dev docs",
-		"docs:build": "vitepress build docs",
-		"docs:serve": "vitepress serve docs"
+		"dev": "cross-env NODE_ENV=development vitepress dev docs --port=5201",
+		"build": "vitepress build docs",
+		"preview": "vitepress preview docs"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"dependencies": {
-		"vitepress": "1.0.0-alpha.73"
+	"devDependencies": {
+		"@mdit-vue/shared": "^0.12.0",
+		"cross-env": "^7.0.3",
+		"vitepress": "1.0.0-alpha.73",
+		"@types/node": "^20.5.9",
+		"sitemap": "^7.1.1",
+		"sass": "^1.66.1",
+		"mdit": "^0.0.1"
 	}
 }
