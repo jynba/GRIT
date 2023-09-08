@@ -57,7 +57,7 @@ ssh 链接的好处是，当你无法访问 GitHub 时，也能通过 ssh 链接
 
 :::
 
-![link标签](./images/weekly2023/link-icon.png)
+![link标签](./images/link-icon.png)
 
 6、用 CSS 画 `√、×` 等符号
 
@@ -110,14 +110,6 @@ box-shadow: 1px 1px 1px #999;
 
 官网 GitHub。
 [flv.js API](https://github.com/bilibili/flv.js/blob/master/docs/api.md){link=card}
-
-### 视界
-
-1、老板管理手册
-
-红极一时的老板管理手册。
-
-[全网都在疯传的《老板管理手册》(转)](https://zhuanlan.zhihu.com/p/537042061){link=card}
 
 ## 0410-0416
 
@@ -231,7 +223,7 @@ Please make sure you have the correct access rights and the repository exists.
 
 文章总结了平常开发过程当中 13 条提升自我技术的建议，小处着手，实用。
 
-![日常开发提升技术的 13 条建议](./images/weekly2023/advice13.png)
+![日常开发提升技术的 13 条建议](./images/advice13.png)
 
 [我差点把同事卷跑了。。。](https://mp.weixin.qq.com/s/JQo9inrZ6eoBazDnxvkD8A){link=card}
 

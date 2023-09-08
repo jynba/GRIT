@@ -19,7 +19,7 @@ hero:
       link: /resources/navigation/nav
     - theme: alt
       text: 时间轴
-      link: /timeline/weekly2023
+      link: /timeline/shuibi
 features:
   - icon: ⚡️
     title: 积累实用工具

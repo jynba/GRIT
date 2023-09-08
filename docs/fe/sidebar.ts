@@ -52,62 +52,6 @@ const fe: DefaultTheme.SidebarItem[] = [
 		],
 	},
 	{
-		text: 'Net',
-		collapsed: true,
-		items: [
-			{
-				text: 'HTTP协议的发展',
-				link: '/fe/net/HTTP_version',
-			},
-			{
-				text: 'Nginx相关',
-				link: '/fe/net/nginx',
-			},
-			{
-				text: 'HTTPS原理',
-				link: '/fe/net/https',
-			},
-			{
-				text: 'OSI七层网络参考模型',
-				link: '/fe/net/OSI',
-			},
-			{
-				text: 'OSI七层网络参考模型',
-				link: '/fe/net/OSI',
-			},
-			{
-				text: '什么是 JWT?',
-				link: '/fe/net/jwt',
-			},
-			{
-				text: 'HTTPS原理',
-				link: '/fe/net/https',
-			},
-			{
-				text: 'HTTP 缓存机制',
-				link: '/fe/net/http_cache',
-			},
-			{
-				text: 'CSS 优先级',
-				link: '/fe/net/css_pre',
-			},
-			{
-				text: '为什么要用 pnpm?',
-				link: '/fe/net/pnpm',
-			},
-		],
-	},
-	{
-		text: 'Nodejs',
-		collapsed: true,
-		items: [
-			{ text: 'Nodejs 基础', link: '/fe/nodejs/node_basis' },
-			{ text: 'Express', link: '/fe/nodejs/express' },
-			{ text: '数据库和身份认证', link: '/fe/nodejs/mysql' },
-			{ text: '大事件后台 API 项目', link: '/fe/nodejs/ev_api_server' },
-		],
-	},
-	{
 		text: 'Other',
 		collapsed: true,
 		items: [
