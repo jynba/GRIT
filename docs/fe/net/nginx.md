@@ -42,7 +42,7 @@
 
    过程可自己查,推荐 curl 获取 sh 文件
 
-   ```linux
+   ```
    curl -fsSL https://get.docker.com -o get-docker.sh
    sudo sh get-docker.sh
 
@@ -51,7 +51,7 @@
    ```
 
 2. 下载 docker-compose
-   ```linux
+   ```
    apt install docker-compose -y
    ```
 3. 在[官网](https://nginxproxymanager.com/setup/#running-the-app)找到 docker-compose.yml

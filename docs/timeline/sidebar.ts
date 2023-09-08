@@ -5,8 +5,9 @@ const timeline: DefaultTheme.SidebarItem[] = [
 		collapsed: true,
 		items: [
 			{ text: '2023时间轴', link: '/timeline/weekly2023' },
+			{ text: '我的随笔', link: '/timeline/shuibi' },
 			{ text: '我的博文', link: '/timeline/blog_essay' },
-			{ text: '策略模式', link: '/timeline/strategy' },
+			{ text: '如何用策略模式优化多个if-else？', link: '/timeline/strategy' },
 		],
 	},
 ];

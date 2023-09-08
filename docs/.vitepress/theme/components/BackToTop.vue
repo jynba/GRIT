@@ -15,13 +15,14 @@
 		name: 'BackToTop',
 		setup: () => {
 			let isShow = ref(false);
-			window.addEventListener('scroll', () => {
-				if (window.pageYOffset > 300) {
-					isShow.value = true;
-				} else {
-					isShow.value = false;
-				}
-			});
+			if (window)
+				window.addEventListener('scroll', () => {
+					if (window.pageYOffset > 300) {
+						isShow.value = true;
+					} else {
+						isShow.value = false;
+					}
+				});
 
 			function handleBackTop() {
 				const asideElements =
@@ -34,11 +35,12 @@
 						behavior: 'smooth',
 					});
 				}
-				// 页面返回顶部
-				window.scrollTo({
-					top: 0,
-					behavior: 'smooth',
-				});
+				if (window)
+					// 页面返回顶部
+					window.scrollTo({
+						top: 0,
+						behavior: 'smooth',
+					});
 			}
 
 			return {
