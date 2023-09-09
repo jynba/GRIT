@@ -8,8 +8,8 @@ const links: { url: string; lastmod: PageData['lastUpdated'] }[] = []
 export default defineConfig({
   title: 'GRIT',
   description: 'JY的前端小窝',
-  outDir: '../dist', //将打包文件名改为GRIT
-  base: '/GRIT/', // 部署站点的基础路径
+  outDir: '.vitepress/GRIT', //将打包文件名改为GRIT
+  base: '/GRIT/', // 部署到github上时访问的根目录
   lastUpdated: true, // 页面上展示最后更新的时间
   head,
 
@@ -56,7 +56,7 @@ export default defineConfig({
       })
   },
   buildEnd: async ({ outDir }) => {
-    const sitemap = new SitemapStream({ hostname: 'https://jynba.github.io/' })
+    const sitemap = new SitemapStream({ hostname: 'https://notes.fe-mm.com/' })
     const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
     sitemap.pipe(writeStream)
     links.forEach((link) => sitemap.write(link))
