@@ -9,7 +9,7 @@ export default defineConfig({
   title: 'GRIT',
   description: 'JY的前端小窝',
   outDir: '../dist', //将打包文件名改为GRIT
-  base: process.env.APP_BASE_PATH || '/', // 部署站点的基础路径
+  base: '/GRIT/', // 部署站点的基础路径
   lastUpdated: true, // 页面上展示最后更新的时间
   head,
 
