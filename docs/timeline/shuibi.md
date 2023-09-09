@@ -6,8 +6,10 @@
 >
 > [新写一篇小笔记](https://github.com/jynba/GRIT/issues/new)
 
-共计 **1** 篇（上次更新: 2023-09-08）
+共计 **2** 篇（上次更新: 2023-09-09）
 
-## 2023 年 (共计 1 篇)
+## 2023 年 (共计 2 篇)
 
-1. 2023-09-08 —— [当你远程仓库已经没有分支了，而你本地还显示对应的远程分支时怎么刷新？](https://github.com/jynba/GRIT/issues/1)
+1. 2023-09-09 —— [git push 踩坑记录](https://github.com/jynba/GRIT/issues/2)
+
+2. 2023-09-08 —— [当你远程仓库已经没有分支了，而你本地还显示对应的远程分支时怎么刷新？](https://github.com/jynba/GRIT/issues/1)
