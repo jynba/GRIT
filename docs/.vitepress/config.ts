@@ -8,8 +8,8 @@ const links: { url: string; lastmod: PageData['lastUpdated'] }[] = []
 export default defineConfig({
   title: 'GRIT',
   description: 'JY的前端小窝',
-  outDir: '.vitepress/GRIT', //将打包文件名改为GRIT
-  base: process.env.APP_BASE_PATH || '/GRIT/', // '/GRIT/'为部署到github上时访问的根目录
+  outDir: '../dist',
+  base: '/GRIT/', // '/GRIT/'为部署到github上时访问的根目录
   lastUpdated: true, // 页面上展示最后更新的时间
   head,
 
