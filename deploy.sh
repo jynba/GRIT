@@ -17,5 +17,3 @@ git commit -m 'feat:deploy最新版blog（vitepress）'
 
 # 直接部署到github 触发github Actions
 git push git@github.com:jynba/GRIT.git main
-
-cd -

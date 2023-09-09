@@ -17,10 +17,17 @@ jobs:
       - run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: pnpm build
+        run: pnpm install && pnpm run build:github
 
+      # 部署
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/.vitepress/GRIT
+          # GitHub 密钥
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # 指定仓库
+          REPOSITORY_NAME: jynba/GRIT
+          # GitHub Pages 读取的分支
+          BRANCH: gh-pages
+          # 静态文件所在目录
+          FOLDER: dist
