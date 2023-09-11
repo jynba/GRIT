@@ -12,7 +12,7 @@ const MD_HEADER = `# jy-notes
 
 日常笔记记录（零零散散啥都记系列）
 
-> 更多博客内容可查看 [jy的小木屋(旧)](https://jynba.github.io) 或 [jy的前端小窝(新)](https://jynba.github.io/GRIT/)
+> 更多博客内容可查看 [jy的前端小窝(新)](https://jynba.github.io/GRIT/) 或 [jy的小木屋(旧)](https://jynba.github.io)
 >
 > [新写一篇小笔记](https://github.com/jynba/GRIT/issues/new)
 `
@@ -100,7 +100,6 @@ function generateIssues({ year, total_count, items }) {
       .catch(() => {
         console.log('docs/timeline/shuibi.md 文件创建失败')
       })
-
   } catch (error) {
     console.log('catch error :>> ', error)
   }
